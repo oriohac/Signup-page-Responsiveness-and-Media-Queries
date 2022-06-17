@@ -48,6 +48,19 @@
             </label><br>
             <i>Password cannot be empty</i>
                 <input type="submit" value="CLAIM YOUR FREE TRIAL" id="greenbtn">
+                <script>
+                    var ib = document.getElementsByTagName("i");
+                    var iv = document.getElementsByTagName("label");
+                    document.getElementById("greenbtn").onclick = function(){
+                        for (var i =0; i<iv.length;i+=1){
+                       iv[i].style.visibility = "visible";
+                   }
+                   for (var i =0; i<ib.length;i+=1){
+                       ib[i].style.visibility = "visible";
+                   }
+                   
+                    }
+                </script>
                 <P class="agree">By clicking the button, you are agreeing to our <span class="TC">Terms and Services</span> </P>
             </form>
         </div>

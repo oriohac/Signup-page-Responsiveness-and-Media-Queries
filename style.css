@@ -74,7 +74,7 @@ i{
     display: flex;
     justify-content: right;
     padding-right: 14px;
-    display: none;
+   visibility: hidden;
 }
 label{
     position: relative;
@@ -88,7 +88,7 @@ label:after{
   bottom: 0;
   width: 20px;
   background: url(icon-error.svg) center/contain no-repeat;
-  display: none;
+ visibility: hidden;
 }
 .frminp{
     
