@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -7,68 +8,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
 </head>
+
 <body>
     <header>
 
     </header>
     <main>
-<div id="container">
-    <div id="left">
-        
-        <h1>
-            Learn to code by watching others
-        </h1>
-        <p>
-            See how experienced developers solve problems in real-time.
-            Watching scripted tutorials is great, but understanding how
-            developers think is invaluable.
-        </p>
-    
-    </div>
+        <div id="container">
+            <div id="left">
+
+                <h1>
+                    Learn to code by watching others
+                </h1>
+                <p>
+                    See how experienced developers solve problems in real-time.
+                    Watching scripted tutorials is great, but understanding how
+                    developers think is invaluable.
+                </p>
+
+            </div>
 
 
-    <div id="right">
-        <div id="freedays"><p class="try">Try it free 7 days <span class="thereafter">then $20/mo. thereafter</span> </p></div>
-        <div id="formcont">
-            <form >
-                <label>
-                <input type="text" value="First Name" class="frminp">
-            </label> <br>
-           <i>First Name cannot be empty</i> 
-            <label>
-                <input type="text" value="Last Name" class="frminp">
-            </label><br>
-            <i>Last Name cannot be empty</i>
-            <label>
-                <input type="email" value="Email Address"name="email" id="email" class="frminp">
-            </label><br>
-            <i>Looks like this is not an email</i>
-            <label>
-                <input type="text" value="Password"name="password" id="pass" class="frminp">
-            </label><br>
-            <i>Password cannot be empty</i>
-                <input type="submit" value="CLAIM YOUR FREE TRIAL" id="greenbtn">
-                <script>
-                    var ib = document.getElementsByTagName("i");
-                    var iv = document.getElementsByTagName("label");
-                    document.getElementById("greenbtn").onclick = function(){
-                        for (var i =0; i<iv.length;i+=1){
-                       iv[i].style.visibility = "visible";
-                   }
-                   for (var i =0; i<ib.length;i+=1){
-                       ib[i].style.visibility = "visible";
-                   }
-                   
-                    }
-                </script>
-                <P class="agree">By clicking the button, you are agreeing to our <span class="TC">Terms and Services</span> </P>
-            </form>
+            <div id="right">
+                <div id="freedays">
+                    <p class="try">Try it free 7 days <span class="thereafter">then $20/mo. thereafter</span> </p>
+                </div>
+                <div id="formcont">
+                    <form>
+
+                        <input type="text" placeholder="First Name" class="frminp" id="fname">
+                        <label>
+                            <img src="icon-error.svg" alt="" class="errorimg">
+                        </label> <br>
+                        <i class="itxt">First Name cannot be empty</i>
+
+                        <input type="text" placeholder="Last Name" class="frminp" id="lname">
+                        <label>
+                            <img src="icon-error.svg" alt="" class="errorimg">
+                        </label><br>
+                        <i class="itxt">Last Name cannot be empty</i>
+
+                        <input type="email" placeholder="Email Address" name="email" id="email" class="frminp">
+                        <label>
+                            <img src="icon-error.svg" alt="" class="errorimg">
+                        </label><br>
+                        <i class="itxt">Looks like this is not an email</i>
+
+
+                        <input type="password" placeholder="Password" name="password" id="pass" class="frminp">
+                        <label>
+                            <img src="icon-error.svg" alt="" class="errorimg">
+                        </label><br>
+                        <i class="itxt">Password cannot be empty</i>
+
+                        <input type="submit" value="CLAIM YOUR FREE TRIAL" id="greenbtn">
+                        <script>
+
+
+                            var ia = document.getElementsByClassName("itxt");
+
+                            var inp = document.getElementsByClassName("frminp");
+
+                            var eri = document.getElementsByClassName("errorimg");
+                            document.getElementById("greenbtn").onclick = function (event) {
+                                event.preventDefault()
+
+                                for (var i = 0; i < inp.length; i += 1) {
+                                    inp[i].style.border = "3px solid red";
+                                }
+                                for (var i = 0; i < ia.length; i += 1) {
+                                    ia[i].style.visibility = "visible";
+                                }
+                                for (var i = 0; i < eri.length; i += 1) {
+                                    eri[i].style.visibility = "visible";
+                                }
+
+                            }
+                        </script>
+                        <P class="agree">By clicking the button, you are agreeing to our <span class="TC"><a
+                                    href="#">Terms and Services</a> </span> </P>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
     </main>
     <footer>
 
     </footer>
+
 </body>
+
 </html>

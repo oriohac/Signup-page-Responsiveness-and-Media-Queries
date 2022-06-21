@@ -1,111 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-body{
+
+body {
     margin: 0;
     background: url(bg-intro-desktop.png);
-    background-color: hsl(0, 100%, 74%) ;
+    background-color: hsl(0, 100%, 74%);
 }
-main{
+
+main {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
 }
-#container{
+
+#container {
     display: flex;
     min-height: 100vh;
 
 }
-#left{
-flex: 50%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-font-family: 'Poppins', sans-serif;
-color: white;
-}
-#left h1{
-font-weight: 700;
-}
-#left p{
-   font-weight: 500; 
+
+#left {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
-#right{
-flex: 50%;
-font-family: 'Poppins', sans-serif;
-padding-right: 30px;
-padding-left: 30px;
-padding-top: 80px;
+#left h1 {
+    font-weight: 700;
 }
 
-#freedays{ 
+#left p {
+    font-weight: 500;
+}
+
+#right {
+    flex: 50%;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 80px;
+}
+
+#freedays {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3px;
-background-color: hsl(248, 32%, 49%);
+    padding: 5px;
+    background-color: hsl(248, 32%, 49%);
 
-font-size: 16px;
-color: white;
-text-align: center;
-font-weight: 600;
-box-shadow: 0 8px 2px -2px rgba(100, 99, 99, 0.5);
-height: 60px;
-border-radius: 6px;
-margin-bottom: 20px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 8px 2px -2px rgba(100, 99, 99, 0.5);
+    height: 60px;
+    border-radius: 6px;
+    margin-bottom: 20px;
 }
-.thereafter{
-   color: hsl(246, 25%, 77%);
-   font-weight: 500; 
+
+.thereafter {
+    color: hsl(246, 25%, 77%);
+    font-weight: 500;
 }
-#formcont{
-    background-color:white ;
+
+#formcont {
+    background-color: white;
     padding: 40px;
     border-radius: 8px;
     justify-content: center;
     text-align: center;
     box-shadow: 0 8px 2px -2px rgba(100, 99, 99, 0.5);
-    
+
 }
-i{
+
+.itxt {
     font-size: 10px;
     color: hsl(0, 100%, 74%);
     font-weight: 400;
     display: flex;
     justify-content: right;
     padding-right: 14px;
-   visibility: hidden;
-}
-label{
-    position: relative;
-    
-}
-label:after{
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: 0;
-  bottom: 0;
-  width: 20px;
-  background: url(icon-error.svg) center/contain no-repeat;
- visibility: hidden;
-}
-.frminp{
-    
-    border-radius: 4px;
-    
-    padding-left: 10px;
-    color: hsl(246, 25%, 77%);
-    border: solid hsl(246, 25%, 77%) 1px;
-    font-weight: 600;
-}
-.frminp:focus{
-    color: hsl(249, 10%, 26%);
-    border:thin hsl(249, 10%, 26%)  1px;
+    visibility: hidden;
 }
 
-#greenbtn{
-    
+label {
+    position: relative;
+}
+
+label .errorimg {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: center/contain no-repeat;
+    visibility: hidden;
+}
+
+label:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url(icon-error.svg) center/contain no-repeat;
+    visibility: hidden;
+}
+
+.frminp {
+
+    border-radius: 4px;
+
+    padding-left: 10px;
+    color: hsl(246, 25%, 77%);
+    border: 1px solid hsl(246, 25%, 77%);
+    font-weight: 600;
+}
+
+.frminp:focus {
+    color: hsl(249, 10%, 26%);
+    border: 1px solid hsl(249, 10%, 26%);
+}
+
+#greenbtn {
+
     border-radius: 4px;
     color: rgb(255, 255, 255);
     margin-bottom: 10px;
@@ -113,60 +136,85 @@ label:after{
     border: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    
     box-shadow: 0 4px 2px -2px rgba(100, 99, 99, 0.5);
-  
+    cursor: pointer;
 }
-input{
+
+
+input {
     width: 94%;
     height: 48px;
-    margin-top: 10px;
+    margin-top: 15px;
     box-sizing: border-box;
 }
-.agree{
+
+.agree {
     font-size: 10px;
     color: hsl(246, 25%, 77%);
     font-weight: 400;
 }
-.TC{
+
+.TC a {
     font-size: 10px;
-    color: hsl(0, 100%, 74%);
     font-weight: 400;
+    text-decoration: none;
+    color: hsl(0, 100%, 74%);
 }
-@media  screen and (max-width:375px) {
-    body{
+
+
+@media screen and (max-width:375px) {
+    body {
         margin: 0;
         background: url(bg-intro-mobile.png);
-        background-color: hsl(0, 100%, 74%) ;
+        background-color: hsl(0, 100%, 74%);
     }
-    #container{
+
+    main {
+        width: 90%;
+    }
+
+    #container {
         display: flex;
         flex-direction: column;
     }
-    #left{
-        
+
+    #left {
+
         text-align: center;
-        
-        }
-        .frminp:focus{
-            color: hsl(249, 10%, 26%);
-            border:thin hsl(249, 10%, 26%)  1px;
-        }
-        #formcont{
-            margin-bottom: 60px;
-            padding: 20px;
-        }
-        #right{
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        #greenbtn{
-            font-size: 10px;
-        } 
-        .agree{
-            text-align: center;
-        }
-        .TC{
-            text-align: center;
-        }
+
+    }
+
+
+
+    #formcont {
+        margin-bottom: 60px;
+        padding: 20px;
+    }
+
+    #right {
+        padding: 10px;
+    }
+
+    #freedays {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #greenbtn {
+        font-size: 10px;
+    }
+
+    .frminp {
+        color: hsl(249, 10%, 26%);
+        border: 1px solid hsl(249, 10%, 26%);
+    }
+
+
+    .agree {
+        text-align: center;
+    }
+
+    .TC {
+        text-align: center;
+    }
 }
