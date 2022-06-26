@@ -65,7 +65,7 @@
                         <script>
 
 
-                            var ia = document.getElementsByClassName("itxt");
+                            var itxt = document.getElementsByClassName("itxt");
 
                             var inp = document.getElementsByClassName("frminp");
 
@@ -74,13 +74,26 @@
                                 event.preventDefault()
 
                                 for (var i = 0; i < inp.length; i += 1) {
-                                    inp[i].style.border = "3px solid red";
+                                    if (inp[i].value == "") {
+                                        inp[i].style.border = "3px solid red";
+                                    }else{
+                                        inp[i].style.border = "3px solid hsl(249, 10%, 26%)";
+                                    }
+                                    
                                 }
-                                for (var i = 0; i < ia.length; i += 1) {
-                                    ia[i].style.visibility = "visible";
+                                for (var i = 0; i < itxt.length; i += 1) {
+                                    if (inp[i].value == "") {
+                                        itxt[i].style.visibility = "visible";
+                                    }else{
+                                        itxt[i].style.visibility = "hidden";
+                                    }
                                 }
                                 for (var i = 0; i < eri.length; i += 1) {
+                                    if (inp[i].value == "") {
                                     eri[i].style.visibility = "visible";
+                                    }else{
+                                        eri[i].style.visibility = "hidden";
+                                    }
                                 }
 
                             }
