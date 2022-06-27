@@ -112,7 +112,16 @@ label .errorimg {
     visibility: hidden;
 }
 
-
+/* label:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url(icon-error.svg) center/contain no-repeat;
+    visibility: hidden;
+} */
 
 .frminp {
 
