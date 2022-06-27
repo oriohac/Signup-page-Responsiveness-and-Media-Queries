@@ -82,6 +82,8 @@ label #emerro {
     left: 20px;
     top: 0;
     bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     color: hsl(0, 100%, 74%);
     background: center/contain no-repeat;
     visibility: hidden;
@@ -112,16 +114,7 @@ label .errorimg {
     visibility: hidden;
 }
 
-/* label:after {
-    content: "";
-    position: absolute;
-    right: 20px;
-    top: 0;
-    bottom: 0;
-    width: 20px;
-    background: url(icon-error.svg) center/contain no-repeat;
-    visibility: hidden;
-} */
+
 
 .frminp {
 
