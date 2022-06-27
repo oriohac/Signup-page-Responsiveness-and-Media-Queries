@@ -76,6 +76,17 @@ main {
 
 }
 
+label #emerro {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    color: hsl(0, 100%, 74%);
+    background: center/contain no-repeat;
+    visibility: hidden;
+}
+
 .itxt {
     font-size: 10px;
     color: hsl(0, 100%, 74%);
@@ -101,16 +112,7 @@ label .errorimg {
     visibility: hidden;
 }
 
-label:after {
-    content: "";
-    position: absolute;
-    right: 20px;
-    top: 0;
-    bottom: 0;
-    width: 20px;
-    background: url(icon-error.svg) center/contain no-repeat;
-    visibility: hidden;
-}
+
 
 .frminp {
 
@@ -125,6 +127,7 @@ label:after {
 .frminp:focus {
     color: hsl(249, 10%, 26%);
     border: 1px solid hsl(249, 10%, 26%);
+    
 }
 
 #greenbtn {

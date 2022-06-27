@@ -48,8 +48,10 @@
                         </label><br>
                         <i class="itxt">Last Name cannot be empty</i>
 
-                        <input type="email" placeholder="Email Address" name="email" id="email" class="frminp">
+
                         <label>
+                            <i id="emerro">email@example/com</i>
+                            <input type="email" placeholder="Email Address" name="email" id="email" class="frminp">
                             <img src="icon-error.svg" alt="" class="errorimg">
                         </label><br>
                         <i class="itxt">Looks like this is not an email</i>
@@ -67,31 +69,39 @@
 
                             var itxt = document.getElementsByClassName("itxt");
 
+                            var email = document.getElementById("email");
                             var inp = document.getElementsByClassName("frminp");
-
+                            var emerro = document.getElementById("emerro");
                             var eri = document.getElementsByClassName("errorimg");
                             document.getElementById("greenbtn").onclick = function (event) {
                                 event.preventDefault()
 
+                                email.onfocus = function () {
+                                    emerro.style.visibility = "hidden";
+                                }
                                 for (var i = 0; i < inp.length; i += 1) {
                                     if (inp[i].value == "") {
                                         inp[i].style.border = "3px solid red";
-                                    }else{
-                                        inp[i].style.border = "3px solid hsl(249, 10%, 26%)";
+                                        inp[i].placeholder = "";
+                                        emerro.style.visibility = "visible";
                                     }
-                                    
+                                    else {
+                                        inp[i].style.border = "3px solid hsl(249, 10%, 26%)";
+                                        emerro.style.visibility = "hidden";
+                                    }
+
                                 }
                                 for (var i = 0; i < itxt.length; i += 1) {
                                     if (inp[i].value == "") {
                                         itxt[i].style.visibility = "visible";
-                                    }else{
+                                    } else {
                                         itxt[i].style.visibility = "hidden";
                                     }
                                 }
                                 for (var i = 0; i < eri.length; i += 1) {
                                     if (inp[i].value == "") {
-                                    eri[i].style.visibility = "visible";
-                                    }else{
+                                        eri[i].style.visibility = "visible";
+                                    } else {
                                         eri[i].style.visibility = "hidden";
                                     }
                                 }
